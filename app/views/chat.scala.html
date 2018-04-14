@@ -11,8 +11,8 @@
 <body ng-app="chatApp" ng-controller="chatController" layout="row" flex="90" layout-align="center stretch">
     <md-card layout="column" flex="none" style="max-width: 800px">
         <md-content id="message-pane" layout="column" flex="90">
-            <div ng-repeat="message in messages">
-                <md-card class="message-card">
+            <div ng-repeat="message in messages" layout="column" layout-align="{{message.sender=='BOT'?'start start':'start end'}}">
+                <md-card class="message-card" ng-style="message.sender=='BOT'?{'background-color':'#6e7c05'}:{'background-color':'#04727c'}">
                     <span>{{message.text}}</span>
                 </md-card>
             </div>
