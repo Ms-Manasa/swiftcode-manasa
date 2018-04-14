@@ -24,7 +24,8 @@ public class FeedService {
             feedResponseObject.title = item.getChildNodes().item(0).getFirstChild().getNodeValue();
             feedResponseObject.pubDate = item.getChildNodes().item(3).getFirstChild().getNodeValue();
             feedResponseObject.description = item.getChildNodes().item(4).getFirstChild().getNodeValue();
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             e.printStackTrace();
 
         }
