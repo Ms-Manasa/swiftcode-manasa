@@ -4,10 +4,13 @@ body {
     padding: 0px;
     margin: 0px;
     overflow: hidden;
+    font-family: 'Permanent Marker', cursive;
 }
 
 #message-pane {
-    background-color: #7c0707;
+    background-image: url("/assets/images/leap.gif");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #form-card {
@@ -16,6 +19,7 @@ body {
 
 .material-icons {
     font-size: 48px !important;
+    font
 }
 
 .message-card {
