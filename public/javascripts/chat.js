@@ -1,14 +1,15 @@
 var app = angular.module('chatApp', ['ngMaterial']);
 
 app.config(function ($mdThemingProvider) {
-    $mdThemingProvider.theme('default')        .primaryPalette('purple')
+    $mdThemingProvider.theme('default')
+        .primaryPalette('purple')
         .accentPalette('red');
 });
 
 app.controller('chatController', function ($scope, $sce) {
     $scope.messages = [];
     $scope.trust = $sce.trustAsHtml;
-    var exampleSocket = new WebSocket('ws://localhost:9000/chatSocket');
+    var exampleSocket = new WebSocket('wss://swiftcode-manasa.herokuapp.com/chatSocket');
     exampleSocket.onmessage = function (event) {
 
         var jsonData = JSON.parse(event.data);
